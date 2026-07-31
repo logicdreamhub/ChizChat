@@ -9,13 +9,19 @@ Current version: **2.4.38** · Android · Windows · Linux
 
 ## Download
 
+### Android
+
+[**Get it on Google Play**](https://play.google.com/store/apps/details?id=com.sagitta.chizchat) — recommended, with automatic updates.
+
+### Direct downloads
+
 | Platform | File | Size |
 |---|---|---|
-| **Android** | [`chizchat_2.4.38.apk`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 10.7 MB |
 | **Windows** | [`ChizChat.Setup.2.4.38.exe`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 120 MB |
 | **Linux (Debian/Ubuntu)** | [`chizchat_2.4.38_amd64.deb`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 120 MB |
+| **Android** (sideload) | [`chizchat_2.4.38.apk`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 10.7 MB |
 
-All downloads are on the [**latest release**](https://github.com/logicdreamhub/ChizChat/releases/latest) page.
+All direct downloads are on the [**latest release**](https://github.com/logicdreamhub/ChizChat/releases/latest) page.
 
 Installing on Linux:
 
@@ -23,7 +29,8 @@ Installing on Linux:
 sudo apt install ./chizchat_2.4.38_amd64.deb
 ```
 
-On Android you'll need to allow installing from unknown sources to sideload the APK.
+Prefer Google Play on Android. To sideload the APK instead, you'll need to allow installing from
+unknown sources.
 
 ---
 

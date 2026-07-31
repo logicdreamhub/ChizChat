@@ -56,7 +56,8 @@ ChizChat gives you four ways to reach people, and you can use all of them at onc
 
 ### Installing
 
-- **Android** — install from Google Play, or sideload the APK if you were given one.
+- **Android** — install from [Google Play](https://play.google.com/store/apps/details?id=com.sagitta.chizchat),
+  or sideload the APK if you were given one.
 - **Windows** — run the installer (`.exe`).
 - **Linux** — run the `AppImage`, or install the `.deb` package.
 
