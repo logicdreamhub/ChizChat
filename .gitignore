@@ -1,0 +1,6 @@
+# Distribution binaries are published as GitHub Release assets, not committed.
+# The .deb and .exe each exceed GitHub's 100 MB per-file limit.
+*.apk
+*.deb
+*.exe
+*.AppImage
