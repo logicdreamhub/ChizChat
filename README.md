@@ -3,7 +3,7 @@
 **A peer-to-peer messenger.** Your messages and files travel directly from your device to the
 other person's device — there is no ChizChat server in the middle holding your conversations.
 
-Current version: **2.4.38** · Android · Windows · Linux
+Current version: **3.0.5** · Android · Windows · Linux
 
 ---
 
@@ -11,26 +11,22 @@ Current version: **2.4.38** · Android · Windows · Linux
 
 ### Android
 
-[**Get it on Google Play**](https://play.google.com/store/apps/details?id=com.sagitta.chizchat) — recommended, with automatic updates.
+[**Get it on Google Play**](https://play.google.com/store/apps/details?id=com.sagitta.chizchat) — with automatic updates.
 
-### Direct downloads
+### Windows and Linux
 
 | Platform | File | Size |
 |---|---|---|
-| **Windows** | [`ChizChat.Setup.2.4.38.exe`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 120 MB |
-| **Linux (Debian/Ubuntu)** | [`chizchat_2.4.38_amd64.deb`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 120 MB |
-| **Android** (sideload) | [`chizchat_2.4.38.apk`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 10.7 MB |
+| **Windows** | [`ChizChat.Setup.3.0.5.exe`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 129 MB |
+| **Linux (Debian/Ubuntu)** | [`chizchat_3.0.5_amd64.deb`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 120 MB |
 
-All direct downloads are on the [**latest release**](https://github.com/logicdreamhub/ChizChat/releases/latest) page.
+Both are on the [**latest release**](https://github.com/logicdreamhub/ChizChat/releases/latest) page.
 
 Installing on Linux:
 
 ```sh
-sudo apt install ./chizchat_2.4.38_amd64.deb
+sudo apt install ./chizchat_3.0.5_amd64.deb
 ```
-
-Prefer Google Play on Android. To sideload the APK instead, you'll need to allow installing from
-unknown sources.
 
 ---
 
@@ -65,9 +61,10 @@ identity — your friends there will need to add you again.
   Realtime Database). It carries connection metadata so two devices can find each other — not your
   messages or files.
 - **Nearby and Workspace use no internet at all.** Traffic stays on your local network.
-- **Your history is local.** Uninstalling removes it. There is no backup and no account recovery.
-- **Nothing is auto-accepted.** Friend requests, file transfers, calls and screen shares all
-  require you to say yes.
+- **Your history is local.** Uninstalling removes it. There is no account recovery — only a
+  password-protected backup you made yourself brings it back.
+- **Nothing is auto-accepted unless you turn it on.** Friend requests, calls and screen shares
+  always require you to say yes; file transfers do too, unless you enable auto-accept for a contact.
 
 Known limitations are documented honestly in the [user guide](USER_GUIDE.md#19-known-limitations).
 

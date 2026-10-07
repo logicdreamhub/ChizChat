@@ -1,6 +1,6 @@
 # ChizChat — User Guide
 
-**Version 2.4.38** · Android · Windows · Linux
+**Version 3.0.5** · Android · Windows · Linux
 
 ---
 
@@ -39,7 +39,8 @@ That one fact explains almost everything about how the app behaves:
 - **Nothing is stored on a server.** Your chat history lives on your device and theirs.
 - **A message to someone who is offline stays on your phone** until they are reachable again.
   It is not "in the cloud waiting for them" — see [When someone is offline](#14-when-someone-is-offline).
-- **Deleting the app deletes your history.** There is no account to log back into.
+- **Deleting the app deletes your history.** There is no account to log back into — only a
+  [backup](#backup--restore) you made yourself brings it back.
 
 ChizChat gives you four ways to reach people, and you can use all of them at once:
 
@@ -80,45 +81,66 @@ time from the sidebar, just under your name.
 
 ## 3. Finding your way around
 
-### PERSONAL and WORK
+### Personal and Work
 
-At the very top of the sidebar there are two pills: **PERSONAL** and **WORK**. These are two
+At the very top of the sidebar there are two pills: **Personal** and **Work**. These are two
 separate spaces with their own contacts, their own profile, and their own chats. Tap to switch.
 
-### The PERSONAL tabs
+### The Personal tabs
 
 Below your profile there are three tabs:
 
-- **FRIENDS** — people you chat with over the internet.
-- **NEARBY** — people you've paired with over local Wi-Fi, plus the radar.
-- **ROOMS** — join or create an ephemeral group room.
+- **Friends** — people you chat with over the internet.
+- **Nearby** — people you've paired with over local Wi-Fi, plus the radar.
+- **Rooms** — join or create an ephemeral group room.
 
-### The WORK tabs
+### The Work tabs
 
-- **WORKMATES** — colleagues added by their local IP address.
-- **TEAMS** — groups of workmates you've organised.
+- **Workmates** — colleagues added by their local IP address.
+- **Teams** — groups of workmates you've organised.
 
 ### The connection bar
 
-A thin strip along the bottom of the app always tells you your current connection state:
+While everything is connected there is no bar. A thin strip appears along the bottom of the app
+only when something needs your attention:
 
 | Bar | Meaning |
 |---|---|
-| **● Connected** (green) | You're online over Wi-Fi or a wired network |
-| **● Connected via Mobile Data** (blue) | You're online, but on cellular |
-| **◐ Connecting… / Reconnecting…** (yellow) | Establishing the connection |
-| **○ Failed to connect** (red) | No connection right now |
+| **Connecting… / Reconnecting…** (yellow) | Establishing the connection |
+| **Can't connect — check your internet connection** (red) | No connection right now |
 
 ### On a phone
 
-The sidebar slides away on small screens. Tap the **☰ menu** icon in the top bar to bring it
-back, and the **‹ back arrow** inside a chat to return to the list.
+ChizChat opens on your **chat list**. A bar along the bottom switches between:
+
+| Tab | What it shows |
+|---|---|
+| **Chats** | Friends you chat with over the internet |
+| **Nearby** | People paired over local Wi-Fi, and the radar |
+| **Rooms** | Join or create a room — and the room you're in, to go back to it |
+| **Work** | Workmates and teams |
+| **Me** | Your profile (your work profile while you're in Work) |
+
+Chats and Nearby show how many unread messages are waiting.
+
+Tap a conversation to open it full-screen. To come back to the list, tap **‹** or press your
+phone's **back** button. Back closes anything that's open first — a menu, a photo, the profile
+— and on the list itself it puts ChizChat in the background (like the Home button) rather than
+quitting, so you stay connected.
+
+The tabs and Personal/Work pills described above are how it looks on a **computer**, where the
+list stays on the left beside the conversation.
 
 ---
 
 ## 4. Your profile
 
-Tap your avatar or the **⚙ gear icon** at the top of the sidebar to open **Edit Profile**.
+Tap **Me** in the bottom bar (phone), or your avatar or the **⚙ gear icon** at the top of the
+sidebar, to open **Edit Profile**. The app's version — for example *ChizChat 3.0.0 · build 487* —
+is shown at the bottom of this screen; quote it when reporting a problem.
+
+- **Appearance** — **Dark** (the default), **Light**, or **System**, which follows your phone's
+  light/dark setting and switches with it.
 
 - **Display Name** — change it any time; your contacts see the new name.
 - **Avatar** — three ways to set one:
@@ -137,22 +159,69 @@ space. Use it for something like `John Doe (Frontend)` while your personal name 
 Under your name in the sidebar is your Peer ID, shortened. Tap it to copy the full ID to your
 clipboard.
 
+### Backup & restore
+
+ChizChat has no account, so **you are your device**. Lose the phone or reinstall the app without
+a backup, and every friend has to add you again. A backup prevents that.
+
+**To back up:** tap **Me** (or the ⚙ gear) → **Back up**.
+1. Choose whether to **include chat history** — the text of your messages and small previews of
+   photos. Full photos, videos and files are not included.
+2. Choose a **password** and type it twice.
+3. Tap **Create backup**. It is saved to **Documents/ChizChat/Backups** on a phone, or to your
+   Downloads folder on a computer.
+
+Then **copy that file somewhere off the phone** — your computer, Google Drive, email to yourself.
+
+> **Keep the password safe, and keep the file private.** Anyone with both can use ChizChat as
+> you. Without the password the file can't be opened — not even by us.
+
+**To restore** on a new phone or after reinstalling: on the welcome screen tap **Restore from a
+backup** (or **Me → Restore** later), choose the file, enter its password, and confirm. ChizChat
+restarts as you, with your contacts — and your chats, if you included them.
+
+Restoring adds what's missing and keeps anything already on the device. Once restored, **stop
+using the old device as that person** — two devices with one identity confuse your friends' apps.
+
+If you have contacts and haven't backed up for 30 days, a reminder appears at the top of your
+chat list. **Later** hides it for another 30 days.
+
 ---
 
 ## 5. Friends — chatting over the internet
 
 ### Adding a friend
 
-Tap **Add Friend** in the FRIENDS tab. You have two options, and one of you does each:
+Tap **Add Friend** in the Friends tab. One of you shows a code, the other scans it:
 
-**If you're sharing your code:**
-1. Tap **Generate My Code**.
-2. A six-digit code appears (e.g. `482-913`). Read it out, message it, whatever is easiest.
+**If you're showing your code:**
+1. Tap **Show my code**.
+2. A QR code appears, with its six digits underneath (e.g. `482-913`).
 3. Wait — the screen says *"Waiting for friend to connect…"*.
 
-**If you're entering their code:**
-1. Type their code into the box.
-2. Tap the **→** arrow.
+**If you're scanning their code:**
+1. Tap **Scan a code** and point your camera at their screen. It connects as soon as the code is
+   read. No camera? **Upload a picture of the code** reads a screenshot instead.
+2. Not together? Ask them to send you the six digits, type them into the box, and tap **→**.
+
+**Not in the same place? Send an invite.** In Add Friend, tap **Share an invite** and send it
+on WhatsApp, SMS, email — anything. An invite **doesn't expire**, and nobody becomes your friend
+until you say so:
+
+1. Your friend taps the link in the invite (or copies the whole message and pastes it into
+   **Add Friend → Got an invite? Paste it here**), then taps **Send a friend request**.
+2. You get **"… wants to add you"** with **Accept** and **Decline**.
+3. Accept, and you're friends on both phones.
+
+You don't need to be online at the same moment. If you're offline when they send it, the request
+waits on *their* phone and arrives the next time you're both online. Requests you've sent and that
+are still waiting show under **Requests you sent** at the top of your friends list, where you can
+cancel them. If you decline someone, a repeat request from them is declined automatically.
+
+> The invite is plain text with a `chizchat://` link — not a web address — because ChizChat has
+> no server of its own. Some apps don't make that link tappable; copying the message works
+> everywhere. On a computer, clicking the link opens the ChizChat desktop app (installed
+> version) the same way; if ChizChat is already open, the invite appears in the open window.
 
 Once it connects, you both appear in each other's friends list. Codes are one-time and
 short-lived; generate a fresh one for each person.
@@ -171,16 +240,41 @@ Each friend has a small dot on their avatar:
 | **Hollow green ring** | Online, but no direct channel yet — the first message spends a few seconds connecting |
 | **Grey** | Offline — see [When someone is offline](#14-when-someone-is-offline) |
 
-Under the name you'll see `Online`, or `Last seen 12m ago`.
+The list is sorted by **most recent conversation first**. Under each name you'll see the last
+message — prefixed with **You:** and its tick (see [Read receipts](#7-read-receipts--what-the-ticks-mean))
+if you sent it — and its time on the right. Friends you've never messaged show `Online` or
+`Last seen 12m ago` instead.
 
-A **red badge** on the right shows unread messages.
+A **badge** on the right shows how many messages are unread.
 
 ### Other things you can do here
 
-- **Search** — the box at the top filters by name or Peer ID.
+- **Search** — the box at the top finds contacts by name, nickname or ID, **and searches the text
+  of your messages**: matches appear under **Messages**, with the words highlighted. Tap one to
+  open that chat.
+- **Filters** — the chips under the search box: **All**, **Unread** (only chats with unread
+  messages) and **Online**. On the Nearby tab the last one is **Connected**.
+- **Pin** — in a contact's info, turn on **Pin to top** to keep them first in the list (📌).
+- **Archive** — in a contact's info, turn on **Archive** to tidy someone away without deleting
+  them. Archived chats sit under **Archived** at the bottom of the list, and come back on their own
+  when that person messages you — unless they're also muted, then they stay archived.
 - **Refresh** (⟳ next to *Add Friend*) — re-checks who's online.
-- **Delete a contact** — the 🗑 icon on their row. This also **permanently deletes your chat
-  history with them**, and asks you to confirm first.
+- **Contact info** — **press and hold** a contact (on a computer, right-click it), or tap their
+  name or picture at the top of a chat. You'll see:
+  - their name, and a **nickname** only you see (tap the ✎) — it replaces their name in your
+    list, chats and notifications;
+  - when you added them, when they were last online, and their ChizChat ID;
+  - **Photos & files** you've shared;
+  - **Mute notifications** — their messages still arrive and show as unread, but silently;
+  - **Block** — they can no longer message, call or send you files or friend requests. They
+    aren't told: to them you simply never come online, and their messages wait as unsent on
+    their phone. Blocked contacts show a ⛔ in your list; inside the chat, **Unblock** replaces the
+    message box;
+  - **Clear chat history** and **Delete contact** (deleting also removes your chat history with
+    them). All of these ask you to confirm.
+- **Two contacts with the same name** get a short tag after the name (e.g. `DustinTab · 3f9a`).
+  They are different ChizChat IDs — usually someone who reinstalled. Their contact info lists the
+  others with the same name and when each was last seen, so you can delete the old one.
 
 ---
 
@@ -190,8 +284,10 @@ Open a chat by tapping a friend. The message box is at the bottom.
 
 ### Text
 
-- Type and press **Enter** (or the **➤ send** button) to send.
-- **Shift+Enter** inserts a new line. The box grows up to five lines.
+- Type, then tap **➤** to send (on a computer, **Enter** also sends).
+- **New line:** on a phone, the keyboard's **Enter** key starts a new line, and you send with
+  **➤**. On a computer, **Enter** sends and **Shift+Enter** starts a new line.
+- The box grows as you type, up to about five lines, then scrolls.
 
 ### Formatting
 
@@ -206,13 +302,14 @@ into Markdown automatically, rather than dumping plain text.
 
 ### The ChizChat thumb 👍
 
-The button next to the send button sends a **thumbs up** — ChizChat's own chunky neon hand, drawn
+The thumb at the right-hand end of the message box sends a **thumbs up** — ChizChat's own chunky neon hand, drawn
 for the app rather than borrowed from your device's font. Send it on its own and it appears
 sticker-sized in the conversation.
 
 ### Voice messages
 
-When the message box is empty, the send button becomes a **🎤 microphone**.
+The round button to the right of the message box is a **🎤 microphone** while the box is empty,
+and turns into **➤ send** as soon as you type.
 
 1. Tap **🎤** to start recording. A red timer appears.
 2. Tap **➤** to send, or the **🗑 bin** to throw the recording away.
@@ -233,7 +330,7 @@ Received voice messages play inline with a scrubber.
 
 ### Clearing a conversation
 
-The **🗑 icon in the chat header** clears the whole conversation. You'll be asked to confirm.
+Tap **⋮** in the chat header, then **Clear history**. You'll be asked to confirm.
 
 ### Scrolling back
 
@@ -253,6 +350,11 @@ Under each message you send there is a small status icon:
 | ✓✓ Double tick (green) | **Delivered** | It reached their device and their device confirmed it |
 | ✓✓ Double tick (blue) | **Read** | They actually opened the chat and saw it |
 | ✕ (red) | **Failed / rejected** | It didn't go through, or a file offer was declined |
+
+Messages sent close together are grouped, and the time and tick appear under the last one in
+the group. A message that is still **waiting to send**, **not sent** or **declined** always says
+so in words next to its icon, wherever it sits. A date chip (*Today*, *Yesterday*, …) separates
+each day.
 
 The blue tick means what it says: it only turns blue when the *other person* opens the
 conversation. Opening your own chat never marks your own messages read.
@@ -281,10 +383,11 @@ read it. The count only ever goes up; someone leaving can't un-see what they alr
 
 ### Sending
 
-Two buttons sit to the left of the message box:
+Tap **📎** to the left of the message box. A small menu opens:
 
-- **🖼 Image** — opens your photo/video picker.
-- **📎 Paperclip** — opens the general file picker. You can select **multiple files**.
+- **Photos & videos** — opens your photo/video picker.
+- **Camera** — *phone only.* Take a photo and it sends straight away.
+- **File** — opens the general file picker. You can select **multiple files**.
 
 On desktop you can also **drag files onto the chat window** — a *"Drop files here"* overlay
 appears.
@@ -450,7 +553,13 @@ Inbound requests appear above the list under **WANTS TO CONNECT** so you can't m
 Nearby chats work exactly like normal chats — text, voice messages, reactions, replies, files,
 read receipts. The difference is the route: everything travels straight across the local Wi-Fi.
 
-**Deleting a nearby contact** (🗑 on their row) also wipes your nearby chat history with them, and
+**Friends you have both ways.** If someone is your internet friend *and* you've paired with them
+nearby, they're one person, not two: one row in **Chats** (a pink 📶 shows when they're nearby
+right now), and one conversation with everything you've sent each other either way, in order.
+New messages go **nearby** while you're linked — no internet needed — and **over the internet**
+otherwise. Their row on the Nearby tab opens the same conversation.
+
+**Deleting a nearby contact** (press and hold their row → **Delete contact**) also wipes your nearby chat history with them, and
 asks first. It does **not** remove them from your internet friends list.
 
 > **Desktop works too.** The Windows and Linux apps take part in Nearby over the same LAN, so
@@ -478,7 +587,7 @@ now does.
 - Text, voice messages, files, reactions and replies all work as in a direct chat.
 - Your own messages show **"Seen by N"** — tap to see who.
 - A **peers panel** lists everyone currently in the room, with a **Search peers…** box.
-- **🖥 Share Screen** and **🗑 Clear History** are in the header.
+- **🖥 Share Screen** is in the header; **Clear history** is under **⋮**.
 
 If the room shows **"No other peers connected."** but you know people are there, use the
 **reconnect** button on that notice — it renews your connection identity, which fixes the case
@@ -518,13 +627,14 @@ Workmates show a green/grey dot for presence, with a **⟳ Refresh Presence** bu
 Each workmate row has:
 
 - **👤+ Add to Team** — put them in one of your teams.
-- **🗑 Delete Workmate** — remove them and their chat history (confirmed first).
+- **Delete** — press and hold the row (on a computer, right-click it or hover and click 🗑) to
+  remove them and their chat history, confirmed first.
 
 ### Teams
 
 Teams group workmates for a project.
 
-1. Go to the **TEAMS** tab and tap **Create Team**.
+1. Go to the **Teams** tab and tap **Create Team**.
 2. Give it a name (e.g. `Engineering`, `Design Sync`) and a short description.
 3. Add workmates from their rows, or from the team's edit screen.
 
@@ -577,10 +687,10 @@ rather than just endured:
 - *"Checking your connection…"*
 - *"Reconnecting…"*
 - *"Connected directly — messages send instantly"* (green)
-- *"Couldn't reach [Name] right now. Your message is saved on this device and will send when
-  they're back."* (amber)
+- *"[Name] isn't reachable right now. Anything you send is saved on this device and goes out
+  when they're back."* (amber)
 
-The **⟳ Refresh Connection** button in the chat header retries on demand.
+**⋮ → Refresh connection** in the chat header retries on demand.
 
 ---
 
@@ -677,9 +787,11 @@ enough.
   (Firebase Realtime Database). It carries connection metadata so two devices can find each other
   — not your messages or files.
 - **Nearby and Workspace use no internet at all.** Traffic stays on your local network.
-- **Your history is local.** Uninstalling removes it. There is no backup and no account recovery.
-- **Nothing is auto-accepted.** Friend requests, file transfers, calls and screen shares all
-  require you to say yes.
+- **Your history is local.** Uninstalling removes it. There is no account recovery — only a backup
+  you made yourself brings it back.
+- **Nothing is auto-accepted unless you turn it on.** Friend requests, calls and screen shares
+  always require you to say yes; file transfers do too, unless you enable auto-accept for a
+  contact in their Contact Details.
 - **Location is never collected**, despite the permission — Android only requires it to expose the
   Wi-Fi network name.
 
