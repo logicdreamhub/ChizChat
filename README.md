@@ -3,29 +3,30 @@
 **A peer-to-peer messenger.** Your messages and files travel directly from your device to the
 other person's device — there is no ChizChat server in the middle holding your conversations.
 
-Current version: **3.0.5** · Android · Windows · Linux
+Current version: **3.0.6** · Android · Windows · Linux
 
 ---
 
 ## Download
 
-### Android
-
-[**Get it on Google Play**](https://play.google.com/store/apps/details?id=com.sagitta.chizchat) — with automatic updates.
-
-### Windows and Linux
+All files are on the [**latest release**](https://github.com/logicdreamhub/ChizChat/releases/latest) page.
 
 | Platform | File | Size |
 |---|---|---|
-| **Windows** | [`ChizChat.Setup.3.0.5.exe`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 129 MB |
-| **Linux (Debian/Ubuntu)** | [`chizchat_3.0.5_amd64.deb`](https://github.com/logicdreamhub/ChizChat/releases/latest) | 120 MB |
+| **Android** | [Google Play](https://play.google.com/store/apps/details?id=com.sagitta.chizchat) (automatic updates), or [`ChizChat-3.0.6.apk`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/ChizChat-3.0.6.apk) | 11 MB |
+| **Windows** | [`ChizChat.Setup.3.0.6.exe`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/ChizChat.Setup.3.0.6.exe) | 143 MB |
+| **Linux (Debian/Ubuntu)** | [`chizchat_3.0.6_amd64.deb`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/chizchat_3.0.6_amd64.deb) | 129 MB |
 
-Both are on the [**latest release**](https://github.com/logicdreamhub/ChizChat/releases/latest) page.
+**Installing the APK:** download it on your phone, open it, and allow your browser or file manager
+to install unknown apps when Android asks. Android 7.0 or newer. If you already have ChizChat from
+Google Play, keep updating it there: Android won't install the APK over the Play version. To switch,
+make a backup under **Me** first, uninstall, install the APK and restore. The APK doesn't update
+itself, so download each new release from this page.
 
-Installing on Linux:
+**Installing on Linux:**
 
 ```sh
-sudo apt install ./chizchat_3.0.5_amd64.deb
+sudo apt install ./chizchat_3.0.6_amd64.deb
 ```
 
 ---

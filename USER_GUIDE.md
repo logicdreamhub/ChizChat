@@ -1,6 +1,6 @@
 # ChizChat — User Guide
 
-**Version 3.0.5** · Android · Windows · Linux
+**Version 3.0.6** · Android · Windows · Linux
 
 ---
 
@@ -58,7 +58,8 @@ ChizChat gives you four ways to reach people, and you can use all of them at onc
 ### Installing
 
 - **Android** — install from [Google Play](https://play.google.com/store/apps/details?id=com.sagitta.chizchat),
-  or sideload the APK if you were given one.
+  or download the APK from the [latest release](https://github.com/logicdreamhub/ChizChat/releases/latest)
+  and sideload it.
 - **Windows** — run the installer (`.exe`).
 - **Linux** — run the `AppImage`, or install the `.deb` package.
 
@@ -94,10 +95,10 @@ Below your profile there are three tabs:
 - **Nearby** — people you've paired with over local Wi-Fi, plus the radar.
 - **Rooms** — join or create an ephemeral group room.
 
-### The Work tabs
+### The Work list
 
-- **Workmates** — colleagues added by their local IP address.
-- **Teams** — groups of workmates you've organised.
+One list, in two sections you can collapse: **Teams** on top, **Direct messages** with workmates
+below. Each section is sorted with the most recent conversation first.
 
 ### The connection bar
 
@@ -605,44 +606,114 @@ required.** Switch to it with the **WORK** pill at the top of the sidebar.
 
 ### Your work identity
 
-The WORK sidebar shows your **work name**, your **work avatar**, and your **device's IP address**
-— tap the IP to copy it. The gear icon edits your work profile independently of your personal one.
+The WORK sidebar shows your **work name**, your **work avatar** and your **status**. The gear icon
+edits your work profile independently of your personal one.
+
+### Your status
+
+Tap your status under your name (or on the Work home screen) to set it:
+
+| Status | Dot |
+|---|---|
+| Available | green |
+| Busy | red |
+| In a meeting | purple |
+| Away | amber |
+
+You can add a short note, like `Reviewing the Q3 deck`. Workmates see your status as the colour of
+your dot and the note under your name, within a few seconds of you changing it. Offline is always
+grey, whatever you last set.
+
+### The Work home screen
+
+On a computer, with no chat open, Work shows a home screen: a greeting and your status, **Catch up**
+(conversations with unread messages), **Online now** (tap someone to message them) and **Your
+teams**.
 
 **Exit Workspace** (the ⎋ icon) takes you back to the personal side.
 
 ### Adding a workmate
 
-Colleagues are added by **IP address**, not by code:
+Tap **+** next to the search box, then **Add workmate**. There are three ways in:
 
-1. Tap **Add Workmate**.
-2. Ask your colleague for their IP — it's shown under their name in their WORK sidebar.
-3. Type it in (e.g. `192.168.1.50`) and tap **Send Request**.
-4. They get a **connection request** to accept.
+- **Network** (the default): colleagues on the same office network who also have **Add workmate**
+  open show up in a list. Tap **Add** and they get a connection request to accept. You're only
+  visible to colleagues while this screen is open, and as your work name. This is separate from
+  being discoverable in Nearby.
+- **QR code**: one of you shows their code, the other taps **Scan a colleague's code**. You're
+  connected straight away with no request to accept. The code only works while it's on screen,
+  and a new one is made each time.
+- **IP address**: the fallback when neither works, for example on a network that blocks devices
+  from seeing each other. Each of you can find your own IP under **Add workmate → IP address**. Type it in and tap **Send
+  request**.
 
-You'll see **"Request sent! Wait for them to accept."** on success, or **"Unable to connect. Check
-the IP."** if the address is wrong or they're on a different network.
+Workmates show a dot for presence, coloured by their status (grey when offline). The **Direct messages** header shows how many are
+online, and its **⟳** button refreshes that.
+A workmate who goes offline stays in your list. If the office network gives either of you a new IP
+address, ChizChat looks for them on the network and reconnects on its own. You don't need to
+add them again.
 
-Workmates show a green/grey dot for presence, with a **⟳ Refresh Presence** button above the list.
+Each row shows the last message, its time, and an unread count. **Press and hold** a row (on a
+computer, right-click it or hover and click **⋯**) for its options:
 
-Each workmate row has:
+- **Add to a team** — put the workmate in one of the teams you created.
+- **Delete workmate** — remove them and their chat history, confirmed first.
 
-- **👤+ Add to Team** — put them in one of your teams.
-- **Delete** — press and hold the row (on a computer, right-click it or hover and click 🗑) to
-  remove them and their chat history, confirmed first.
+Use the search box to filter teams and people by name. Unread Work messages are also counted on
+the **Work** tab, and on the **Work** switch while you're on the Personal side.
 
 ### Teams
 
 Teams group workmates for a project.
 
-1. Go to the **Teams** tab and tap **Create Team**.
+1. Tap **+** then **New team** (or the **+** on the Teams header).
 2. Give it a name (e.g. `Engineering`, `Design Sync`) and a short description.
-3. Add workmates from their rows, or from the team's edit screen.
+3. Add workmates with **Add to a team** on their row, or from **Edit team** in the team's
+   options.
 
 Team chats behave like rooms: everyone in the team receives messages, files and replies, and your
-own messages show **"Seen by N"**.
+own messages show **"Seen by N"**. Members don't need to have added each other as workmates. If
+you're both in a team, you can talk there.
 
-Teams sync automatically to the workmates in them, so everyone sees the same team list. Only the
-person who created a team can edit or delete it.
+Teams stay in step automatically. Someone who was away when a team was created, changed or
+deleted catches up the next time they're on the network at the same time as the team's creator
+or an admin.
+
+### Mentions and team notifications
+
+In a team chat, type **@** to pick a member from a list, or **@team** to mention everyone. Someone
+you mention sees **Mentioned you** above your message. The team gets an **@** badge in their list,
+and their notification says you mentioned them.
+
+Each team has its own notification setting (press and hold the team):
+
+- **Notify for all messages**: the default.
+- **Notify for @mentions only**: messages still arrive and count as unread, but you're only
+  notified when someone mentions you or the team.
+- **Mute notifications**: no notifications at all.
+
+Teams with reduced notifications show a 🔕 next to their name.
+
+### Shared files
+
+Open **⋮ → Shared files** in any chat to see every file and photo shared in it, newest first. You
+can filter to **Photos & videos** or **Documents**, view pictures, and save any file you have on
+this device. Files that were offered but never downloaded are listed as **Not downloaded**.
+
+**Who can do what** (press and hold a team for its options):
+
+| | Creator | Admin | Member |
+|---|---|---|---|
+| Rename, edit the description, add or remove members | ✔ | ✔ | — |
+| Make or remove admins | ✔ | — | — |
+| Delete the team | ✔ | — | — |
+| Leave the team | — | ✔ | ✔ |
+
+To make someone an admin, open **Edit team** and tap **Make admin** next to their name. An admin
+can't remove the creator or another admin.
+
+If you leave a team while its creator and admins are all offline, it disappears from your list
+straight away, and they're told the next time one of them is on the network.
 
 ### Work chats and file transfer
 
