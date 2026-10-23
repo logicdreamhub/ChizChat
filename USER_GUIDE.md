@@ -750,6 +750,34 @@ tick **Don't show this again** once you've got the idea.
 
 Nothing is ever delivered silently hours later without you deciding to send it.
 
+### Offline delivery with a Quiver server (coming in the next update)
+
+> **Coming in the next ChizChat update.** It isn't in 3.0.6 yet. Server operators can already set
+> up a [Quiver](https://github.com/logicdreamhub/quiver) server today, so it's ready when the
+> update lands.
+
+Everything above describes what happens when your friend has **no** Quiver server. If they've
+connected one, a message you send while they're offline doesn't wait on your phone. ChizChat seals
+it so only they can open it and leaves it on their server. They get it the next time they open
+ChizChat, even if you've gone offline by then. It shows as **sent** right away, and turns
+**delivered** once they've collected it.
+
+To let friends do this for you: **Settings → Offline delivery**, enter the server's address (and an
+access code if the server asks for one), and tap **Connect server**. Each friend learns about
+your server the next time you're both online. The count under **Friends who can reach you**
+goes up as they do.
+
+- **Anyone can run a Quiver server**: your company, a provider, or you. ChizChat works with any
+  of them. See [Host Quiver on a VPS](https://github.com/logicdreamhub/quiver/blob/main/docs/deploy-vps.md).
+- **The server can't read your messages** or see who sent them. It sees only that something
+  arrived for you, when, and how big it was.
+- **Photos and files still need you both online.** Text and voice notes go through the server.
+  Photos and files are sent as offers, and an offer can't, because the files stay on the sender's
+  device until you accept.
+- **Disconnect** collects anything still waiting, deletes your account on the server, and
+  puts you back to the default described above.
+- Blocking or removing a friend also cuts off their access to your server.
+
 ### Connection status inside a chat
 
 While a direct channel is being established, a banner names each step so the wait is explained
@@ -858,6 +886,11 @@ enough.
   (Firebase Realtime Database). It carries connection metadata so two devices can find each other
   — not your messages or files.
 - **Nearby and Workspace use no internet at all.** Traffic stays on your local network.
+- **Quiver servers (coming in the next update) are the one exception to "no server", and only if
+  you connect one.** Messages left there are end-to-end encrypted to your key and signed by the
+  sender inside the encryption. The operator sees when something arrives for your account and its
+  size, not its content or who sent it. Unread messages are deleted after the server's retention
+  period (usually 30 days).
 - **Your history is local.** Uninstalling removes it. There is no account recovery — only a backup
   you made yourself brings it back.
 - **Nothing is auto-accepted unless you turn it on.** Friend requests, calls and screen shares

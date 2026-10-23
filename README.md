@@ -45,6 +45,27 @@ ChizChat gives you four ways to reach people, and you can use all of them at onc
 Alongside messaging: voice and video calls, screen sharing, voice messages, photo/file/folder
 transfer, read receipts, and QR-code pairing.
 
+## Coming next: offline delivery
+
+Today, a message to a friend who's offline waits on *your* phone until you're both online at the
+same time. The next update closes that gap: connect a **Quiver** server under
+**Settings → Offline delivery**, and friends can leave you messages that wait on the server instead,
+**sealed so that the server can't read them or tell who sent them.** You collect them the next time
+you open ChizChat, even if they've gone offline by then.
+
+## Run your own Quiver server
+
+**[Quiver](https://github.com/logicdreamhub/quiver)** is the open-source server behind offline
+delivery. *The mailbox that can't read your mail.*
+
+- 🏢 **Companies**: run it on the office network, so colleagues' messages arrive even when a laptop
+  is shut, and nothing leaves the building.
+- 💼 **Hosting providers**: offer offline delivery as a subscription, with access codes built in.
+- 👨‍👩‍👧 **Communities and families**: a small VPS is all it takes.
+
+It's one command with Docker, and there's a
+[step-by-step VPS guide](https://github.com/logicdreamhub/quiver/blob/main/docs/deploy-vps.md).
+
 ## First run
 
 There is no account, no password, and no registration. You type a display name and tap
@@ -62,6 +83,8 @@ identity — your friends there will need to add you again.
   Realtime Database). It carries connection metadata so two devices can find each other — not your
   messages or files.
 - **Nearby and Workspace use no internet at all.** Traffic stays on your local network.
+- **Offline delivery (next update) is optional.** If you connect a Quiver server, messages left
+  there are end-to-end encrypted. The operator can't read them or see who sent them.
 - **Your history is local.** Uninstalling removes it. There is no account recovery — only a
   password-protected backup you made yourself brings it back.
 - **Nothing is auto-accepted unless you turn it on.** Friend requests, calls and screen shares
@@ -82,4 +105,4 @@ Report a problem via [GitHub Issues](https://github.com/logicdreamhub/ChizChat/i
 
 ---
 
-*Built by Sagitta Technologies.*
+*Developed by Sagitta Technologies.*
