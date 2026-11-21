@@ -1,6 +1,6 @@
 # ChizChat — User Guide
 
-**Version 3.0.6** · Android · Windows · Linux
+**Version 3.0.8** · Android · Windows · Linux
 
 ---
 
@@ -9,7 +9,7 @@
 1. [What ChizChat is](#1-what-chizchat-is)
 2. [Getting started](#2-getting-started)
 3. [Finding your way around](#3-finding-your-way-around)
-4. [Your profile](#4-your-profile)
+4. [Settings and your profile](#4-settings-and-your-profile)
 5. [Friends — chatting over the internet](#5-friends--chatting-over-the-internet)
 6. [Sending messages](#6-sending-messages)
 7. [Read receipts — what the ticks mean](#7-read-receipts--what-the-ticks-mean)
@@ -17,7 +17,7 @@
 9. [Voice and video calls](#9-voice-and-video-calls)
 10. [Screen sharing](#10-screen-sharing)
 11. [Nearby — offline sharing over local Wi-Fi](#11-nearby--offline-sharing-over-local-wi-fi)
-12. [Rooms — ephemeral group chat](#12-rooms--ephemeral-group-chat)
+12. [Rooms — group chat](#12-rooms--group-chat)
 13. [Workspace — workmates and teams on the office LAN](#13-workspace--workmates-and-teams-on-the-office-lan)
 14. [When someone is offline](#14-when-someone-is-offline)
 15. [Notifications](#15-notifications)
@@ -31,14 +31,15 @@
 ## 1. What ChizChat is
 
 ChizChat is a **peer-to-peer messenger**. Your messages and files travel **directly from your
-device to the other person's device**. There is no ChizChat server in the middle holding your
-conversations.
+device to the other person's device** whenever they can. Your conversations are not kept on a
+ChizChat server.
 
 That one fact explains almost everything about how the app behaves:
 
-- **Nothing is stored on a server.** Your chat history lives on your device and theirs.
-- **A message to someone who is offline stays on your phone** until they are reachable again.
-  It is not "in the cloud waiting for them" — see [When someone is offline](#14-when-someone-is-offline).
+- **Your chat history lives on your device and theirs**, not on a server.
+- **A message to someone who is offline waits for them sealed**, so only they can open it, on
+  their offline-delivery server (ChizChat's own, unless they changed it). If they've turned that
+  off, it stays on your phone until they're reachable. See [When someone is offline](#14-when-someone-is-offline).
 - **Deleting the app deletes your history.** There is no account to log back into — only a
   [backup](#backup--restore) you made yourself brings it back.
 
@@ -67,13 +68,16 @@ ChizChat gives you four ways to reach people, and you can use all of them at onc
 
 On first launch you'll see the **setup screen**:
 
-1. Type a **display name**. This is what other people see — it is not a username, there is no
-   password, and nothing is registered anywhere.
-2. Tap **INITIALIZE**.
+1. Under **What should friends call you?**, type a name. This is what other people see — it is
+   not a username, there is no password, and no phone number.
+2. Tap **Get started**.
 
 That's it. ChizChat generates a **Peer ID** for your device (something like
 `chizchat-a3f19c02d8b41e77`). This ID is your address on the network. You can see and copy it any
-time from the sidebar, just under your name.
+time under **Settings → About**.
+
+Under your name at the top you'll see whether you're **Online**, **Connecting…** or **Offline**.
+While you're offline, messages you write wait and go out when you're back.
 
 > **Keep in mind:** your identity lives on this device. Installing ChizChat on a second device
 > creates a *different* identity — your friends there will need to add you again.
@@ -93,7 +97,7 @@ Below your profile there are three tabs:
 
 - **Friends** — people you chat with over the internet.
 - **Nearby** — people you've paired with over local Wi-Fi, plus the radar.
-- **Rooms** — join or create an ephemeral group room.
+- **Rooms** — group chats that anyone with the room name can join.
 
 ### The Work list
 
@@ -120,12 +124,12 @@ ChizChat opens on your **chat list**. A bar along the bottom switches between:
 | **Nearby** | People paired over local Wi-Fi, and the radar |
 | **Rooms** | Join or create a room — and the room you're in, to go back to it |
 | **Work** | Workmates and teams |
-| **Me** | Your profile (your work profile while you're in Work) |
+| **Me** | Settings (Work settings while you're in Work) |
 
 Chats and Nearby show how many unread messages are waiting.
 
 Tap a conversation to open it full-screen. To come back to the list, tap **‹** or press your
-phone's **back** button. Back closes anything that's open first — a menu, a photo, the profile
+phone's **back** button. Back closes anything that's open first — a menu, a photo, Settings
 — and on the list itself it puts ChizChat in the background (like the Home button) rather than
 quitting, so you stay connected.
 
@@ -134,38 +138,51 @@ list stays on the left beside the conversation.
 
 ---
 
-## 4. Your profile
+## 4. Settings and your profile
 
 Tap **Me** in the bottom bar (phone), or your avatar or the **⚙ gear icon** at the top of the
-sidebar, to open **Edit Profile**. The app's version — for example *ChizChat 3.0.0 · build 487* —
-is shown at the bottom of this screen; quote it when reporting a problem.
+sidebar, to open **Settings**. It's a short list, and each row shows its current state:
 
-- **Appearance** — **Dark** (the default), **Light**, or **System**, which follows your phone's
-  light/dark setting and switches with it.
+| Row | Shows | Opens |
+|---|---|---|
+| **Your name and avatar** (the card at the top) | Your display name | **Edit profile** |
+| **Appearance** | Dark, Light or System | The theme picker |
+| **Backup & restore** | When you last backed up, or **Never** in amber | Back up and restore |
+| **Offline delivery** | Off, or **On** with how many friends can reach you | [Offline delivery](#offline-delivery-through-quiver-on-by-default) |
+| **About** | The app version | What ChizChat does, plus version and build |
 
-- **Display Name** — change it any time; your contacts see the new name.
-- **Avatar** — three ways to set one:
-  - **PRESETS** — pick from the built-in set.
-  - **CUSTOMIZE** — choose a background colour and a face style to generate your own.
-  - **UPLOAD** — use any JPG, PNG or WebP from your device. It is automatically shrunk to a small
-    thumbnail before being shared, so it costs almost nothing to send.
+On a phone, tap a row to open it, and press **back** (or **‹**) to return to the list. On a
+computer, the list stays on the left and the open page is on the right.
 
-Tap **Save Profile** when you're done.
+Changes apply straight away, except on **Edit profile**, which has its own **Save profile** button.
 
-Your **Work profile** (name and avatar) is separate — edit it from the gear icon inside the WORK
-space. Use it for something like `John Doe (Frontend)` while your personal name stays casual.
+- **Edit profile**
+  - **Display name**: change it any time; your contacts see the new name.
+  - **Avatar**, set three ways:
+    - **PRESETS**: pick from the built-in set.
+    - **CUSTOMIZE**: choose a background colour and a face style to generate your own.
+    - **UPLOAD**: use any JPG, PNG or WebP from your device. It's automatically shrunk to a
+      small thumbnail before being shared, so it costs almost nothing to send.
+- **Appearance**: **Dark** (the default), **Light**, or **System**, which follows your phone's
+  light/dark setting and switches with it. It applies to Personal and Work alike.
+- **About**: the version and build, for example *3.0.7 · build 494*. Quote them when reporting a
+  problem.
+
+Your **Work profile** (name and avatar) is separate. Edit it from **Work settings**, the gear icon
+inside the WORK space. Use it for something like `John Doe (Frontend)` while your personal name
+stays casual.
 
 ### Copying your Peer ID
 
-Under your name in the sidebar is your Peer ID, shortened. Tap it to copy the full ID to your
-clipboard.
+**Settings → About** shows your ChizChat ID with a **Copy** button. (Until 3.0.8 it sat under your
+name in the sidebar; that spot now shows your connection status.)
 
 ### Backup & restore
 
 ChizChat has no account, so **you are your device**. Lose the phone or reinstall the app without
 a backup, and every friend has to add you again. A backup prevents that.
 
-**To back up:** tap **Me** (or the ⚙ gear) → **Back up**.
+**To back up:** tap **Me** (or the ⚙ gear) → **Backup & restore** → **Back up**.
 1. Choose whether to **include chat history** — the text of your messages and small previews of
    photos. Full photos, videos and files are not included.
 2. Choose a **password** and type it twice.
@@ -178,7 +195,7 @@ Then **copy that file somewhere off the phone** — your computer, Google Drive,
 > you. Without the password the file can't be opened — not even by us.
 
 **To restore** on a new phone or after reinstalling: on the welcome screen tap **Restore from a
-backup** (or **Me → Restore** later), choose the file, enter its password, and confirm. ChizChat
+backup** (or **Me → Backup & restore → Restore** later), choose the file, enter its password, and confirm. ChizChat
 restarts as you, with your contacts — and your chats, if you included them.
 
 Restoring adds what's missing and keeps anything already on the device. Once restored, **stop
@@ -568,14 +585,14 @@ asks first. It does **not** remove them from your internet friends list.
 
 ---
 
-## 12. Rooms — ephemeral group chat
+## 12. Rooms — group chat
 
 Rooms are throwaway group chats. **Anyone who knows the room name can join** — there is no owner,
 no invite list and no membership.
 
 ### Joining or creating
 
-1. Go to the **ROOMS** tab and tap **Join / Create Room**.
+1. Go to the **Rooms** tab and tap **Join or create a room**.
 2. Type a room name (it starts you off with `chizchat-lobby`).
 3. Tap **JOIN ROOM**.
 
@@ -594,8 +611,8 @@ If the room shows **"No other peers connected."** but you know people are there,
 **reconnect** button on that notice — it renews your connection identity, which fixes the case
 where your device's registration has gone stale.
 
-> Rooms are **ephemeral**. There is no history for anyone who wasn't there, and no server keeping
-> the room alive.
+> Rooms have **no history for anyone who wasn't there**, and no server keeping the room alive.
+> Pick a room name only your group knows.
 
 ---
 
@@ -607,7 +624,9 @@ required.** Switch to it with the **WORK** pill at the top of the sidebar.
 ### Your work identity
 
 The WORK sidebar shows your **work name**, your **work avatar** and your **status**. The gear icon
-edits your work profile independently of your personal one.
+opens **Work settings**: the same layout as Settings, in blue, with rows for your work profile,
+**Status**, **Network** (this device's address, with a Copy button), **Appearance** and **About**.
+Your work name and avatar are separate from your personal ones.
 
 ### Your status
 
@@ -731,8 +750,10 @@ while the app is available to receive; it stops when you sign out or close the a
 This is the part of ChizChat that behaves differently from a normal messenger, so it's worth
 understanding.
 
-When you write to someone who is offline, the message **stays on your device**. There is no server
-holding it for them. The message box even changes its hint to *"Type a message (will send when
+Most of the time a message to an offline friend goes to their offline-delivery server (see
+[Offline delivery](#offline-delivery-through-quiver-on-by-default) below). This section is about
+the other case: a friend who has turned offline delivery off, or is on an older ChizChat. Then the
+message **stays on your device**, with no server holding it for them. The message box even changes its hint to *"Type a message (will send when
 online)…"*, and the message shows the yellow **🕐 pending** clock.
 
 **The first time this happens**, ChizChat explains it with a *"Saved on your phone"* card. You can
@@ -750,20 +771,21 @@ tick **Don't show this again** once you've got the idea.
 
 Nothing is ever delivered silently hours later without you deciding to send it.
 
-### Offline delivery with a Quiver server (coming in the next update)
+### Offline delivery through Quiver (on by default)
 
-> **Coming in the next ChizChat update.** It isn't in 3.0.6 yet. Server operators can already set
-> up a [Quiver](https://github.com/logicdreamhub/quiver) server today, so it's ready when the
-> update lands.
+Since 3.0.8, ChizChat connects to its own Quiver server, `https://quiver.conewer.com`, the first
+time it starts, so offline delivery works without setting anything up. You can switch to another
+server, or turn it off with **Disconnect**. After a disconnect ChizChat never reconnects on its own.
 
-Everything above describes what happens when your friend has **no** Quiver server. If they've
-connected one, a message you send while they're offline doesn't wait on your phone. ChizChat seals
+Everything above describes what happens when your friend has **no** Quiver server. If they have
+one, a message you send while they're offline doesn't wait on your phone. ChizChat seals
 it so only they can open it and leaves it on their server. They get it the next time they open
 ChizChat, even if you've gone offline by then. It shows as **sent** right away, and turns
 **delivered** once they've collected it.
 
-To let friends do this for you: **Settings → Offline delivery**, enter the server's address (and an
-access code if the server asks for one), and tap **Connect server**. Each friend learns about
+To use a different server: **Settings → Offline delivery**, **Disconnect**, then enter the server's
+address (and an access code if it asks for one) and tap **Connect server**. **Use ChizChat's server**
+puts the default back. Each friend learns about
 your server the next time you're both online. The count under **Friends who can reach you**
 goes up as they do.
 
@@ -775,7 +797,7 @@ goes up as they do.
   Photos and files are sent as offers, and an offer can't, because the files stay on the sender's
   device until you accept.
 - **Disconnect** collects anything still waiting, deletes your account on the server, and
-  puts you back to the default described above.
+  puts you back to the phone-only behaviour described above.
 - Blocking or removing a friend also cuts off their access to your server.
 
 ### Connection status inside a chat
@@ -880,17 +902,20 @@ enough.
 
 ## 18. Privacy and how your data travels
 
-- **Messages and files go device-to-device.** They are not stored on a ChizChat server, because
-  there isn't one.
+- **Messages and files go device-to-device** whenever the two devices can reach each other, and
+  they are encrypted in transit either way.
+- **When a direct link isn't possible** (often on mobile data), the connection goes through a
+  **relay** run by ChizChat at `turn.conewer.com`. The relay passes encrypted traffic along; it
+  can't read your messages, calls or files and doesn't store them. It sees the two devices'
+  network addresses and how much data flows.
 - **A signalling service is used to introduce two devices to each other** for internet chats
   (Firebase Realtime Database). It carries connection metadata so two devices can find each other
   — not your messages or files.
 - **Nearby and Workspace use no internet at all.** Traffic stays on your local network.
-- **Quiver servers (coming in the next update) are the one exception to "no server", and only if
-  you connect one.** Messages left there are end-to-end encrypted to your key and signed by the
-  sender inside the encryption. The operator sees when something arrives for your account and its
-  size, not its content or who sent it. Unread messages are deleted after the server's retention
-  period (usually 30 days).
+- **Offline delivery uses a Quiver server**: ChizChat's own `quiver.conewer.com` by default, or
+  one you choose, and none if you disconnect. Messages left there are end-to-end encrypted to your key and signed by the sender inside the encryption.
+  The operator sees when something arrives for your account and its size, not its content or who
+  sent it. Unread messages are deleted after the server's retention period (usually 30 days).
 - **Your history is local.** Uninstalling removes it. There is no account recovery — only a backup
   you made yourself brings it back.
 - **Nothing is auto-accepted unless you turn it on.** Friend requests, calls and screen shares
@@ -908,8 +933,9 @@ Being honest about the edges:
 - **Full-resolution originals of media *you sent*** can't always be recovered after an app
   restart; the stored thumbnail stands in. Keeping every sent file would double your storage use,
   which defeats the point of a large-file feature.
-- **Voice calls are most reliable when both devices are on the same local network.** There is no
-  relay path for audio.
+- **Voice calls are smoothest when both devices are on the same local network.** Over the
+  internet they can go through ChizChat's relay when a direct link isn't possible, which adds a
+  little delay.
 - **Nearby is Android and desktop only**, over local Wi-Fi.
 - **Rooms have no history for people who weren't there**, and no moderation — anyone with the name
   can join.
