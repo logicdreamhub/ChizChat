@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChizChat: free peer-to-peer messenger for Android, Windows and Linux</title>
+<meta name="description" content="ChizChat is a free, open-source peer-to-peer messenger. Messages, calls and files go device to device, with no account and no phone number. Works offline on Wi-Fi and office LANs. Android, Windows, Linux.">
+<link rel="canonical" href="https://logicdreamhub.github.io/ChizChat/">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="theme-color" content="#5b21b6">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="ChizChat: peer-to-peer messenger">
+<meta property="og:description" content="Messages, calls and files go device to device. No account, no phone number. Android, Windows, Linux.">
+<meta property="og:url" content="https://logicdreamhub.github.io/ChizChat/">
+<meta property="og:image" content="https://logicdreamhub.github.io/ChizChat/social.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ChizChat",
+  "description": "A free, open-source peer-to-peer messenger. Messages, calls and files go device to device.",
+  "applicationCategory": "CommunicationApplication",
+  "operatingSystem": "Android, Windows, Linux",
+  "url": "https://logicdreamhub.github.io/ChizChat/",
+  "downloadUrl": "https://github.com/logicdreamhub/ChizChat/releases/latest",
+  "image": "https://logicdreamhub.github.io/ChizChat/logo.png",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Organization", "name": "Sagitta Technologies" },
+  "sameAs": [
+    "https://github.com/logicdreamhub/ChizChat",
+    "https://play.google.com/store/apps/details?id=com.sagitta.chizchat"
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #faf8ff; --fg: #1c1530; --muted: #5d5575; --card: #ffffff;
+    --line: #e6e0f5; --accent: #6d28d9; --accent-2: #8b5cf6; --accent-fg: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #120d1f; --fg: #eee9fb; --muted: #a79fc0; --card: #1b1430;
+      --line: #2e2547; --accent: #8b5cf6; --accent-2: #a78bfa;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    background: linear-gradient(160deg, #3b0b7a 0%, #6d28d9 55%, #8b5cf6 100%);
+    color: #fff; padding: 64px 0 72px;
+  }
+  .hero .wrap { display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+  .hero img { width: 168px; height: 168px; border-radius: 36px; box-shadow: 0 20px 50px rgba(0,0,0,.35); }
+  .hero h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); line-height: 1.1; margin: 0 0 14px; letter-spacing: -.02em; }
+  .hero p.lead { font-size: 1.2rem; margin: 0 0 8px; color: #ede7ff; max-width: 34em; }
+  .hero p.meta { margin: 0 0 28px; color: #d8ccff; font-size: .95rem; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 12px 20px; border-radius: 12px; font-weight: 600;
+    text-decoration: none; background: #fff; color: #4c1d95;
+  }
+  .btn.ghost { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.35); }
+  .btn:hover { filter: brightness(.95); }
+
+  section { padding: 56px 0 8px; }
+  h2 { font-size: 1.7rem; margin: 0 0 8px; letter-spacing: -.01em; }
+  .sub { color: var(--muted); margin: 0 0 24px; }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.1rem; }
+  .card p { margin: 0; color: var(--muted); font-size: .97rem; }
+  .tag { display: inline-block; font-size: .78rem; font-weight: 600; padding: 2px 8px; border-radius: 999px;
+         background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); margin-bottom: 10px; }
+
+  ul.ticks { padding: 0; list-style: none; margin: 0; columns: 2 260px; column-gap: 32px; }
+  ul.ticks li { padding-left: 26px; position: relative; margin-bottom: 10px; break-inside: avoid; }
+  ul.ticks li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+
+  table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+  th, td { text-align: left; padding: 14px 18px; border-bottom: 1px solid var(--line); }
+  tr:last-child td { border-bottom: 0; }
+  th { font-size: .85rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); }
+
+  footer { margin-top: 64px; padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: .92rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+  @media (max-width: 700px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .hero img { width: 112px; height: 112px; border-radius: 26px; order: -1; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <h1>ChizChat</h1>
+      <p class="lead">A free, open-source peer-to-peer messenger. Your messages, calls and files go straight from your device to theirs, not through a chat server.</p>
+      <p class="meta">No account · No phone number · Android, Windows, Linux</p>
+      <div class="btns">
+        <a class="btn" href="https://play.google.com/store/apps/details?id=com.sagitta.chizchat">Get it on Google Play</a>
+        <a class="btn ghost" href="https://github.com/logicdreamhub/ChizChat/releases/latest">Download APK, Windows, Linux</a>
+        <a class="btn ghost" href="https://github.com/logicdreamhub/ChizChat">Source on GitHub</a>
+      </div>
+    </div>
+    <img src="logo.png" width="168" height="168" alt="ChizChat logo">
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <h2>Four ways to reach people</h2>
+      <p class="sub">Use any of them, or all at once. Two of them work with no internet at all.</p>
+      <div class="grid">
+        <div class="card"><span class="tag">Internet</span><h3>Friends</h3><p>Everyday chat, calls and file sharing with people anywhere.</p></div>
+        <div class="card"><span class="tag">No internet</span><h3>Nearby</h3><p>Fast, large file transfers between devices on the same Wi-Fi.</p></div>
+        <div class="card"><span class="tag">Internet</span><h3>Rooms</h3><p>Quick, throwaway group chats. Anyone with the room name can join.</p></div>
+        <div class="card"><span class="tag">No internet</span><h3>Workspace</h3><p>Colleagues and teams chatting over the office LAN.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Everything a messenger should do</h2>
+      <p class="sub">Plus tools for small businesses that sell over chat.</p>
+      <ul class="ticks">
+        <li>Voice and video calls, screen sharing</li>
+        <li>Voice messages, photos, files and whole folders</li>
+        <li>Read receipts and QR-code pairing</li>
+        <li>Calls ring over the lock screen, even when the app is closed</li>
+        <li>Labels, "Needs reply" and quick replies</li>
+        <li>Contact notes, follow-up reminders and scheduled messages</li>
+        <li>Business profile with opening hours, away and greeting messages</li>
+        <li>Product catalog and payment cards, order stages from New to Delivered</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Private by design</h2>
+      <p class="sub">There is no ChizChat account, so there is nothing to sign in to and nothing to leak.</p>
+      <div class="grid">
+        <div class="card"><h3>Device to device</h3><p>Messages and files travel directly between devices whenever they can reach each other, encrypted in transit.</p></div>
+        <div class="card"><h3>Relay can't read</h3><p>When a direct link isn't possible, an encrypted relay passes traffic along without reading or storing it.</p></div>
+        <div class="card"><h3>Offline delivery you can own</h3><p>End-to-end encrypted mailbox via <a href="https://github.com/logicdreamhub/quiver">Quiver</a>, ours or your own server. Unread mail is deleted after 30 days.</p></div>
+        <div class="card"><h3>Your history stays local</h3><p>Chats, labels and notes live on your device, backed up only with a password you choose.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Download</h2>
+      <p class="sub">Every file for the current version is on the <a href="https://github.com/logicdreamhub/ChizChat/releases/latest">latest release</a> page.</p>
+      <table>
+        <thead><tr><th>Platform</th><th>Get it</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Android</strong> 7.0+</td><td><a href="https://play.google.com/store/apps/details?id=com.sagitta.chizchat">Google Play</a> (automatic updates), or the APK from the <a href="https://github.com/logicdreamhub/ChizChat/releases/latest">release page</a></td></tr>
+          <tr><td><strong>Windows</strong></td><td>Installer (<code>.exe</code>) on the <a href="https://github.com/logicdreamhub/ChizChat/releases/latest">release page</a></td></tr>
+          <tr><td><strong>Linux</strong> Debian / Ubuntu</td><td><code>.deb</code> package on the <a href="https://github.com/logicdreamhub/ChizChat/releases/latest">release page</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>ChizChat is developed by Sagitta Technologies.</span>
+    <span>
+      <a href="https://github.com/logicdreamhub/ChizChat">GitHub</a> ·
+      <a href="https://github.com/logicdreamhub/ChizChat/blob/main/USER_GUIDE.md">User guide</a> ·
+      <a href="https://github.com/logicdreamhub/ChizChat/issues">Report an issue</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
