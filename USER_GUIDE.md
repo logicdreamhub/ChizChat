@@ -1,6 +1,6 @@
 # ChizChat — User Guide
 
-**Version 3.0.9** · Android · Windows · Linux
+**Version 3.1.2** · Android · Windows · Linux
 
 ---
 
@@ -164,7 +164,8 @@ Changes apply straight away, except on **Edit profile**, which has its own **Sav
     - **UPLOAD**: use any JPG, PNG or WebP from your device. It's automatically shrunk to a
       small thumbnail before being shared, so it costs almost nothing to send.
 - **Appearance**: **Dark** (the default), **Light**, or **System**, which follows your phone's
-  light/dark setting and switches with it. It applies to Personal and Work alike.
+  light/dark setting and switches with it. It applies to Personal and Work alike. **Turn text
+  faces into emoji** (on by default) converts :D, <3 and similar when you send.
 - **About**: the version and build, for example *3.0.7 · build 494*. Quote them when reporting a
   problem.
 
@@ -441,13 +442,29 @@ Received voice messages play inline with a scrubber.
 
 **Long-press** (or right-click on desktop) any message to open its menu:
 
-- **React** — six custom ChizChat emoji along the top: ❤️ love, 😂 laugh, 😮 wow, 😢 sad, 😠 angry,
-  👍 like. Tap one to react; it appears on the message for both of you.
+- **React** — the chat dims and a reaction bar appears above the message: ❤️ love, 😂 laugh,
+  😮 wow, 😢 sad, 🙏 thanks, 👍 like. Tap **+** for more emoji. Tap the reaction you already
+  picked to take it back. You can also **double-tap** a message to send ❤️.
 - **Copy Message** — copies the text to your clipboard.
 - **Select Text** — opens the message in a view where you can select and copy just part of it.
 - **Reply** — quotes the message above your reply box. Tap **✕** to cancel.
-- **Forward** — pick a friend to forward it to, with a search box to find them.
+- **Forward** — opens a sheet with one search over friends, groups, Rooms and Workspace teams,
+  and your recent chats along the top. Pick up to 10, add an optional note, and tap **Send**.
+  You stay in the chat; the people you forwarded to see a *Forwarded* label.
 - **Delete Message** — removes it from your device.
+
+### Reactions
+
+Reactions show under the message, with the same emoji grouped and counted. Yours is tinted. Tap
+a reaction to see who reacted; from there you can remove yours.
+
+### Text faces and big emoji
+
+Type a text face such as **:D**, **<3**, **XD** or **(y)** and it turns into an emoji when you
+send. A suggestion chip appears as you type; tap it to swap now, and press **Backspace** (or
+**Undo**) to get the text back. Faces inside links, words or code are left alone. Turn it off in
+**Settings → Appearance → Turn text faces into emoji**. A message of one to three emoji alone
+shows large, without a bubble.
 
 ### Clearing a conversation
 

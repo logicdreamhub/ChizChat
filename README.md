@@ -3,7 +3,7 @@
 **A peer-to-peer messenger.** Your messages and files travel directly from your device to the
 other person's device whenever they can — your conversations are not kept on a ChizChat server.
 
-Current version: **3.0.9** · Android · Windows · Linux
+Current version: **3.1.2** · Android · Windows · Linux
 
 ---
 
@@ -13,9 +13,9 @@ All files are on the [**latest release**](https://github.com/logicdreamhub/ChizC
 
 | Platform | File | Size |
 |---|---|---|
-| **Android** | [Google Play](https://play.google.com/store/apps/details?id=com.sagitta.chizchat) (automatic updates), or [`ChizChat-3.0.9.apk`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/ChizChat-3.0.9.apk) | 11 MB |
-| **Windows** | [`ChizChat.Setup.3.0.9.exe`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/ChizChat.Setup.3.0.9.exe) | 143 MB |
-| **Linux (Debian/Ubuntu)** | [`chizchat_3.0.9_amd64.deb`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/chizchat_3.0.9_amd64.deb) | 129 MB |
+| **Android** | [Google Play](https://play.google.com/store/apps/details?id=com.sagitta.chizchat) (automatic updates), or [`ChizChat-3.1.2.apk`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/ChizChat-3.1.2.apk) | 11 MB |
+| **Windows** | [`ChizChat.Setup.3.1.2.exe`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/ChizChat.Setup.3.1.2.exe) | 144 MB |
+| **Linux (Debian/Ubuntu)** | [`chizchat_3.1.2_amd64.deb`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/chizchat_3.1.2_amd64.deb) | 129 MB |
 
 **Installing the APK:** download it on your phone, open it, and allow your browser or file manager
 to install unknown apps when Android asks. Android 7.0 or newer. If you already have ChizChat from
@@ -26,7 +26,7 @@ itself, so download each new release from this page.
 **Installing on Linux:**
 
 ```sh
-sudo apt install ./chizchat_3.0.9_amd64.deb
+sudo apt install ./chizchat_3.1.2_amd64.deb
 ```
 
 ---
@@ -45,26 +45,33 @@ ChizChat gives you four ways to reach people, and you can use all of them at onc
 Alongside messaging: voice and video calls, screen sharing, voice messages, photo/file/folder
 transfer, read receipts, and QR-code pairing.
 
-## New in 3.0.9
+## New in 3.1.2
 
-**Keep chats organised and answer faster**
-- **Labels:** tag chats (*Customer*, *Supplier*, or your own) and filter by them. *New order →
-  Pending payment → Paid → Delivered* track where each order stands.
-- **Needs reply** lists everyone waiting for an answer, even chats you've already read.
-- **Quick replies:** type **/** to insert a saved answer, with the person's name filled in.
-- **Notes** on each contact, and **follow-up reminders** that notify you even when ChizChat is
-  closed.
-- **Send later:** hold the send button to schedule a message.
-- **Message everyone with a label** at once. Each person gets their own message.
+**Everyone needs to update.** Since 3.0.10, ChizChat finds friends through its own relay instead
+of Firebase, so 3.0.9 and older can't see 3.1.2, and the other way round.
 
-**For businesses** (Settings → Business)
-- A **business profile** with opening hours ("Open now · closes 6:00 PM"), address, map and phone.
-- **Away and greeting messages**, sent automatically.
-- **Payment details** and a **product catalog**, sent as cards with photos and prices.
+**Reactions and emoji**
+- **Long-press** a message for a quick reaction bar (❤️ 😂 😮 😢 🙏 👍, and **+** for more).
+  **Double-tap** sends ❤️.
+- Reactions sit neatly under the message, grouped with a count. **Tap one** to see who reacted
+  and take yours back.
+- Fresh, modern emoji throughout your chats, sharp at every size. One to three emoji sent alone
+  show large.
+- **Text faces** like :D and <3 turn into emoji (switch it off in Settings → Appearance).
 
-**Calls and notifications**
-- Incoming calls **ring over the lock screen**, even when ChizChat is closed.
-- Notifications show **who wrote and what they said**, decrypted on your phone.
+**Forwarding**
+- Forward to **up to 10** friends, groups, Rooms or Workspace teams at once, with an optional note.
+- Forwarding **photos and files** works again, and receivers see a *Forwarded* label.
+
+**Connections and calls**
+- Adding friends is faster and much more reliable.
+- Chats and calls carry on when you switch between **Wi-Fi and mobile data**.
+- Messages that didn't arrive are **sent again automatically**.
+- **New call screens**: quick replies, video calls and call history in the chat. Group calls in
+  Rooms let people join and leave without ending the call.
+- Calling someone whose app is closed: you **hear it ring**, and answering opens the call.
+
+**Android**: the app icon now fills its shape on your home screen.
 
 ## Run your own Quiver server
 
