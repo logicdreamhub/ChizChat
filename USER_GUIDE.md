@@ -1,6 +1,6 @@
 # ChizChat — User Guide
 
-**Version 3.0.8** · Android · Windows · Linux
+**Version 3.0.9** · Android · Windows · Linux
 
 ---
 
@@ -204,6 +204,42 @@ using the old device as that person** — two devices with one identity confuse 
 If you have contacts and haven't backed up for 30 days, a reminder appears at the top of your
 chat list. **Later** hides it for another 30 days.
 
+### Business account
+
+For people who sell or serve customers on ChizChat. Open **Settings → Business** and turn on
+**This is a business account**. Nothing changes until you tap **Save**, and turning it off makes
+it a personal account again.
+
+- **Business profile**: business name, category, a short description, address (with an optional
+  map link), phone and website. Your contacts see these in your contact info with a 🏪 next to
+  your name in their chat list, a **maps** button and **tap to call**. Changes reach each contact
+  the next time you're both online.
+- **Opening hours**: tick the days you're open and set the times. A closing time earlier than the
+  opening time means you're open past midnight. Customers see **Open now · closes 6:00 PM** or
+  **Closed · opens Mon 9:00 AM**, worked out in your time zone even if they're somewhere else.
+- **Away message**: an automatic reply when someone messages you **outside opening hours**, or
+  **always** while you set yourself away. Each person gets it at most once every 12 hours, and it
+  isn't sent while you have their chat open.
+- **Greeting**: an automatic reply the first time someone who has never messaged you before
+  writes. It's sent once per person.
+- In both messages, **{name}** becomes their name and **{myname}** your business name.
+  Automatic replies show **Automatic reply** under them, and ChizChat never answers another
+  automatic reply, so two businesses can't get stuck replying to each other.
+- Automatic replies are sent **from your device** when the message reaches it, because there is
+  no server to send them. If your phone is off or ChizChat has been closed by the system, they go
+  out when the messages reach you.
+- **Catalog**: **Settings → Catalog** (shown once you're a business) holds your products, each with
+  a photo, price, short description and whether it's in stock. In a chat, tap **📎 → Product** to
+  send one as a card. A customer sees the photo, the price and an **I'd like to order this**
+  button, which puts an order message in *their* message box for them to send. Customers only see
+  the products you send them, and the photo travels inside the message (about 30 KB), so it
+  shows even when they're offline later.
+- **Payment details**: add GCash, Maya, bank or other accounts. In a chat, tap **📎 → Payment**
+  and pick one to send it as a card with **copy** buttons. Payment details are **not** shown on
+  your profile; they go only to the chats you send them to. Someone on an older ChizChat sees
+  the same details as plain text.
+- Your business settings are included in your backup.
+
 ---
 
 ## 5. Friends — chatting over the internet
@@ -271,7 +307,29 @@ A **badge** on the right shows how many messages are unread.
   of your messages**: matches appear under **Messages**, with the words highlighted. Tap one to
   open that chat.
 - **Filters** — the chips under the search box: **All**, **Unread** (only chats with unread
-  messages) and **Online**. On the Nearby tab the last one is **Connected**.
+  messages), **Needs reply** and **Online**, followed by one chip per label. On the Nearby tab
+  **Online** is called **Connected**. Swipe the row sideways to see them all. ChizChat remembers
+  the chip you picked last.
+- **Needs reply** — chats where the other person sent the last message and you haven't
+  answered, **even if you've already read it**. The chip shows how many are waiting. Muted and
+  blocked chats are left out.
+- **Labels** — colored tags such as *Customer*, *Supplier* or *Pending payment* to sort your
+  chats. To label a chat, open its contact info and tap the labels you want under **Labels**
+  (tap again to remove one). A chat can have several labels. They show as colored dots after
+  its name, and each label is a filter chip. Tap the **+** chip at the end of the row to add,
+  rename, recolor, reorder or delete labels. Five starter labels are there from the start, and
+  you can change or delete them. **Labels are private**: they stay on your device and in your
+  backup, and the person you labeled never sees them.
+- **Order status** — *New order*, *Pending payment*, *Paid* and *Delivered* are **order
+  stages**. A chat is in one stage at a time: tapping **Paid** in their contact info replaces
+  *Pending payment*. They're shown as a row of steps above your other labels, and each stage is
+  still a filter chip, so you can list everyone who hasn't paid yet. Any label can be made an
+  order stage when you create or edit it.
+- **Message everyone with a label** — tap a label chip, then **Message everyone in …** above the
+  list. Write once; each person gets it as **their own normal message** from you and can't see
+  who else got it. **{name}** becomes each person's name, and you can untick anyone before
+  sending. Replies arrive in each person's own chat. **History** shows past broadcasts and, for
+  each person, whether it was delivered or read.
 - **Pin** — in a contact's info, turn on **Pin to top** to keep them first in the list (📌).
 - **Archive** — in a contact's info, turn on **Archive** to tidy someone away without deleting
   them. Archived chats sit under **Archived** at the bottom of the list, and come back on their own
@@ -282,6 +340,15 @@ A **badge** on the right shows how many messages are unread.
   - their name, and a **nickname** only you see (tap the ✎) — it replaces their name in your
     list, chats and notifications;
   - when you added them, when they were last online, and their ChizChat ID;
+  - **Labels** — tap to add or remove them for this chat, or make a new one;
+  - **Remind me to follow up** — pick a time and, if you like, what it's about (*"Ask if the
+    payment went through"*). At that time you get a notification, even if ChizChat is closed.
+    Tapping it opens the chat. The chat also moves to the **top of your list** with an amber 🔔, and
+    a **Follow up** chip appears among the filters. **Opening the chat** clears it, or tap
+    **Done**; **Change** picks a new time. A reminder that isn't due yet shows a grey 🔔;
+  - **Note** — a private note about this person, e.g. *"Cash on delivery only. Owes ₱1,200."*
+    It saves by itself when you leave the box, and only you see it. Its first line also shows under their name at the
+    top of the chat, and **searching** the chat list also finds text in your notes;
   - **Photos & files** you've shared;
   - **Mute notifications** — their messages still arrive and show as unread, but silently;
   - **Block** — they can no longer message, call or send you files or friend requests. They
@@ -306,6 +373,42 @@ Open a chat by tapping a friend. The message box is at the bottom.
 - **New line:** on a phone, the keyboard's **Enter** key starts a new line, and you send with
   **➤**. On a computer, **Enter** sends and **Shift+Enter** starts a new line.
 - The box grows as you type, up to about five lines, then scrolls.
+
+### Quick replies
+
+Saved answers for things you send often: prices, opening hours, payment details.
+
+- **Use one:** type **/** in the message box. A list of your quick replies opens; keep typing to
+  narrow it (`/pr` finds `/price`), then tap one. On a computer you can also use **↑ ↓** and
+  **Enter** or **Tab**. You can also tap **📎 → Quick reply** to pick from the full list.
+- The reply is put **into the message box, not sent**, so you can change it first.
+- **Placeholders** are filled in for you: **{name}** becomes the name of the person you're
+  chatting with (your nickname for them, if you set one), **{myname}** becomes your name, and **{date}** becomes today's date. In a team chat,
+  **{name}** is left as it is so you can type the right name.
+- **Manage them** from **Manage quick replies** at the bottom of the list: add, edit or delete.
+  A shortcut is one word of lowercase letters, digits, `-` or `_`. Three examples come with the app (`/hello`,
+  `/hours`, `/thanks`). Change them to suit you.
+- A **/** followed by something that matches no shortcut is just text, so links and paths
+  type as normal.
+- Quick replies stay on your device and in your backup.
+
+### Send later
+
+Write a message now and have it sent at a set time, for a payment reminder or an early-morning
+"your order ships today".
+
+- Type the message, then **press and hold ➤** (on a computer, **right-click** it), or tap
+  **📎 → Send later**. Pick a time (**In 1 hour**, **This evening**, **Tomorrow, 9 AM** and so on)
+  or choose any date and time.
+- A bar above the message box shows **N scheduled messages**. Open it to **send now**, **edit**
+  (the text goes back into the box) or **delete** each one.
+- **It's sent from your device**, because there's no server to send it for you. While ChizChat is
+  running, it goes out on time. If ChizChat is closed then, you get a notification, **"Scheduled
+  message to … is ready"**. Open the app and it's sent straight away.
+- A message that fell due **more than a day ago** while ChizChat was closed isn't sent by itself.
+  It stays in the bar marked **Not sent** for you to send or delete.
+- On Android 12 and later the notification can come a few minutes late, because the phone
+  groups alarms to save battery.
 
 ### Formatting
 
@@ -918,6 +1021,8 @@ enough.
   sent it. Unread messages are deleted after the server's retention period (usually 30 days).
 - **Your history is local.** Uninstalling removes it. There is no account recovery — only a backup
   you made yourself brings it back.
+- **Business accounts** share their business profile (not their payment details) with their
+  contacts. Labels, notes and quick replies never leave your device except in your own backup.
 - **Nothing is auto-accepted unless you turn it on.** Friend requests, calls and screen shares
   always require you to say yes; file transfers do too, unless you enable auto-accept for a
   contact in their Contact Details.

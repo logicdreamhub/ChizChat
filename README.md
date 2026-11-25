@@ -3,7 +3,7 @@
 **A peer-to-peer messenger.** Your messages and files travel directly from your device to the
 other person's device whenever they can — your conversations are not kept on a ChizChat server.
 
-Current version: **3.0.8** · Android · Windows · Linux
+Current version: **3.0.9** · Android · Windows · Linux
 
 ---
 
@@ -13,9 +13,9 @@ All files are on the [**latest release**](https://github.com/logicdreamhub/ChizC
 
 | Platform | File | Size |
 |---|---|---|
-| **Android** | [Google Play](https://play.google.com/store/apps/details?id=com.sagitta.chizchat) (automatic updates), or [`ChizChat-3.0.8.apk`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/ChizChat-3.0.8.apk) | 11 MB |
-| **Windows** | [`ChizChat.Setup.3.0.8.exe`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/ChizChat.Setup.3.0.8.exe) | 143 MB |
-| **Linux (Debian/Ubuntu)** | [`chizchat_3.0.8_amd64.deb`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/chizchat_3.0.8_amd64.deb) | 129 MB |
+| **Android** | [Google Play](https://play.google.com/store/apps/details?id=com.sagitta.chizchat) (automatic updates), or [`ChizChat-3.0.9.apk`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/ChizChat-3.0.9.apk) | 11 MB |
+| **Windows** | [`ChizChat.Setup.3.0.9.exe`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/ChizChat.Setup.3.0.9.exe) | 143 MB |
+| **Linux (Debian/Ubuntu)** | [`chizchat_3.0.9_amd64.deb`](https://github.com/logicdreamhub/ChizChat/releases/latest/download/chizchat_3.0.9_amd64.deb) | 129 MB |
 
 **Installing the APK:** download it on your phone, open it, and allow your browser or file manager
 to install unknown apps when Android asks. Android 7.0 or newer. If you already have ChizChat from
@@ -26,7 +26,7 @@ itself, so download each new release from this page.
 **Installing on Linux:**
 
 ```sh
-sudo apt install ./chizchat_3.0.8_amd64.deb
+sudo apt install ./chizchat_3.0.9_amd64.deb
 ```
 
 ---
@@ -45,18 +45,26 @@ ChizChat gives you four ways to reach people, and you can use all of them at onc
 Alongside messaging: voice and video calls, screen sharing, voice messages, photo/file/folder
 transfer, read receipts, and QR-code pairing.
 
-## New in 3.0.8
+## New in 3.0.9
 
-- **Opens about twice as fast.**
-- **More reliable on mobile data.** When two phones can't connect directly, ChizChat now uses its
-  own relay instead of a shared free one.
-- **Offline delivery is on by default.** Messages to a friend who's offline wait for them on
-  ChizChat's **Quiver** server, **sealed so that the server can't read them or tell who sent them.**
-  They collect them the next time they open ChizChat, even if you've gone offline by then. You can
-  switch to another server or turn it off under **Settings → Offline delivery**.
-- **Clearer first steps:** a friendlier start screen, your connection status at the top, and a
-  one-tap **Add your first friend**.
-- **Formatted messages look better:** links, lists, quotes and inline code.
+**Keep chats organised and answer faster**
+- **Labels:** tag chats (*Customer*, *Supplier*, or your own) and filter by them. *New order →
+  Pending payment → Paid → Delivered* track where each order stands.
+- **Needs reply** lists everyone waiting for an answer, even chats you've already read.
+- **Quick replies:** type **/** to insert a saved answer, with the person's name filled in.
+- **Notes** on each contact, and **follow-up reminders** that notify you even when ChizChat is
+  closed.
+- **Send later:** hold the send button to schedule a message.
+- **Message everyone with a label** at once. Each person gets their own message.
+
+**For businesses** (Settings → Business)
+- A **business profile** with opening hours ("Open now · closes 6:00 PM"), address, map and phone.
+- **Away and greeting messages**, sent automatically.
+- **Payment details** and a **product catalog**, sent as cards with photos and prices.
+
+**Calls and notifications**
+- Incoming calls **ring over the lock screen**, even when ChizChat is closed.
+- Notifications show **who wrote and what they said**, decrypted on your phone.
 
 ## Run your own Quiver server
 
@@ -95,6 +103,9 @@ identity — your friends there will need to add you again.
 - **Offline delivery** uses ChizChat's own Quiver server by default, or one you choose, or none if
   you disconnect. Messages left there are end-to-end encrypted: the operator can't read them or see
   who sent them, and unread ones are deleted after 30 days.
+- **Labels, notes, quick replies and your catalog stay on your device** (and in your backup).
+  A business profile is shared only with your own contacts, device to device. Payment details go
+  only to the chats you send them to.
 - **Your history is local.** Uninstalling removes it. There is no account recovery — only a
   password-protected backup you made yourself brings it back.
 - **Nothing is auto-accepted unless you turn it on.** Friend requests, calls and screen shares
