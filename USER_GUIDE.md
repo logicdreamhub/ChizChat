@@ -1,6 +1,6 @@
 # ChizChat — User Guide
 
-**Version 3.1.2** · Android · Windows · Linux
+**Version 3.3.3** · Android · Windows · Linux
 
 ---
 
@@ -16,7 +16,7 @@
 8. [Photos, files and folders](#8-photos-files-and-folders)
 9. [Voice and video calls](#9-voice-and-video-calls)
 10. [Screen sharing](#10-screen-sharing)
-11. [Nearby — offline sharing over local Wi-Fi](#11-nearby--offline-sharing-over-local-wi-fi)
+11. [Nearby — offline, no network needed](#11-nearby--offline-no-network-needed)
 12. [Rooms — group chat](#12-rooms--group-chat)
 13. [Workspace — workmates and teams on the office LAN](#13-workspace--workmates-and-teams-on-the-office-lan)
 14. [When someone is offline](#14-when-someone-is-offline)
@@ -48,7 +48,7 @@ ChizChat gives you four ways to reach people, and you can use all of them at onc
 | Mode | Needs internet? | Best for |
 |---|---|---|
 | **Friends** | Yes | Everyday chat with people anywhere |
-| **Nearby** | **No** — one shared Wi-Fi network | Fast, large file transfers between devices in the same place |
+| **Nearby** | **No** — two Android phones need no network at all; a laptop needs shared Wi-Fi | Chat and fast, large file transfers between people in the same place |
 | **Rooms** | Yes | Quick, throwaway group chat — anyone with the room name can join |
 | **Workspace** | **No** — office LAN | Colleagues and teams on the same office network |
 
@@ -96,7 +96,7 @@ separate spaces with their own contacts, their own profile, and their own chats.
 Below your profile there are three tabs:
 
 - **Friends** — people you chat with over the internet.
-- **Nearby** — people you've paired with over local Wi-Fi, plus the radar.
+- **Nearby** — people you've paired with in person, plus the radar.
 - **Rooms** — group chats that anyone with the room name can join.
 
 ### The Work list
@@ -121,7 +121,7 @@ ChizChat opens on your **chat list**. A bar along the bottom switches between:
 | Tab | What it shows |
 |---|---|
 | **Chats** | Friends you chat with over the internet |
-| **Nearby** | People paired over local Wi-Fi, and the radar |
+| **Nearby** | People paired in person, and the radar |
 | **Rooms** | Join or create a room — and the room you're in, to go back to it |
 | **Work** | Workmates and teams |
 | **Me** | Settings (Work settings while you're in Work) |
@@ -502,7 +502,7 @@ Receipts work on **every** transport:
 | | Delivered | Read |
 |---|---|---|
 | Friends (internet) | ✔ | ✔ |
-| Nearby (local Wi-Fi) | ✔ | ✔ |
+| Nearby | ✔ | ✔ |
 | Workspace workmate | ✔ | ✔ |
 | Rooms and Workspace teams | — | **"Seen by N"** |
 
@@ -599,77 +599,133 @@ On **desktop**, a **🖥 Share Screen** button appears in the chat header (and i
 3. Once accepted, they see your screen live. A banner shows sharing is active so you can't forget
    it's on.
 
-Screen sharing is **view-only** — the other person can see, not touch.
+Screen sharing starts **view-only** — the other person can see, not touch.
+
+### Letting a friend control your screen (desktop, direct chats)
+
+While you share your screen, a small **floating bar** stays on top of every app: *"Sharing your
+screen with …"* with **Stop sharing**. Drag it anywhere.
+
+Your friend can tap **Ask to control**. ChizChat comes to the front with the request (or shows a
+notification if it is hidden); tap **Allow control** or **Not now**.
+
+- Once allowed, the bar reads *"… is controlling your screen"*. **Take back control** ends their
+  control but keeps sharing; **Stop sharing** ends both.
+- **Ctrl+Alt+S** on your keyboard takes control back at once, even while they move the mouse.
+- Control also ends by itself when the share stops or the connection drops; they have to ask again.
+- Only in direct chats with friends. Rooms are view-only, because anyone with a room's name can join.
+- On Linux it needs an X11 (Xorg) session; a Wayland desktop can share but cannot be controlled.
+
+### Controlling a friend's screen from your phone
+
+Turn the phone sideways: their screen fills it, with one control bar at the bottom.
+
+- **Ask to control**, then wait for them to allow it (**Cancel** if you change your mind).
+- **Tap** to click, **drag** to select or move, **hold** for a right-click, **two fingers** to
+  scroll, **pinch** to zoom (**Fit** zooms back out).
+- **Keyboard** opens your phone's keyboard; the row above it adds Esc, Tab, Ctrl, Alt, the arrow
+  keys and Del. Ctrl and Alt apply to the next key you press.
+- While you are in control the bar hides after a few seconds — tap the small **⌃** to bring it
+  back. **Leave** ends the session.
 
 ---
 
-## 11. Nearby — offline sharing over local Wi-Fi
+## 11. Nearby — offline, no network needed
 
-**Nearby is for moving large files fast between devices in the same place, with no internet at
-all.**
+**Nearby is for chatting and moving large files fast between people in the same place, with no
+internet at all.**
 
-### The one rule
+### How devices find each other
 
-**Both devices must be on the same Wi-Fi network.** That's the entire requirement. No internet is
-needed on that network — it just has to connect the two devices.
+| Devices | What you need |
+|---|---|
+| **Android ↔ Android** | **Nothing but the two phones.** Bluetooth finds the other phone, then the link switches to Wi-Fi Direct for fast transfers. No Wi-Fi network, hotspot or mobile data. |
+| **Android ↔ Windows/Linux**, **laptop ↔ laptop** | Both devices on the **same Wi-Fi network** (a phone hotspot works, with no internet on it). |
+| **Android without Google Play**, or Bluetooth permission refused | Same as laptops: one shared Wi-Fi network. |
 
-The radar screen states this up front and shows your **network name** and **IP address** so you
-can check against the other device.
+The radar tells you which mode it is in: the line under **NEARBY** reads
+*"bluetooth · no network needed"*, or shows your network name and IP when it is using Wi-Fi.
+
+ChizChat is discoverable as soon as it is open. The other person does not have to be on the radar
+screen, only to have the app open with discoverability on.
 
 ### Opening the radar
 
 Go to the **NEARBY** tab and tap **Nearby radar**.
 
-You'll see a sweeping radar with yourself in the middle and every discovered device around you.
-Below, a row of chips lists everyone by name, and a counter says *"3 devices nearby"* — or
-*"Looking for people nearby…"*.
+You'll see a sweeping radar with yourself in the middle and everyone around you. Below, a row of
+chips lists everyone by name, and a counter says *"2 devices nearby"* or *"Looking for people
+nearby…"*. Only people who are actually around are shown. Friends who are away stay in your
+**NEARBY** list but not on the radar.
+
+The first time you open it on Android, ChizChat asks for **Nearby devices** and **location**
+permissions. Android requires both for a Bluetooth scan. ChizChat never reads your location.
 
 Radar controls (top right):
 
-- **👁 Eye** — toggle **discoverable**. When hidden, others can't find you on the radar; friends
+- **👁 Eye**: toggle **discoverable**. When hidden, others can't find you on the radar; friends
   you've already paired with can still reach you.
-- **⟳ Refresh** — scan again.
-- **▣ QR** — add someone by code instead (see below).
-- **✕** — close the radar. Your existing links stay up.
+- **⟳ Refresh**: scan again.
+- **▣ QR**: add someone by code instead (see below).
+- **✕**: close the radar. Your existing links stay up.
 
-### The network panel
+### Bluetooth mode
 
-At the top of the radar, a panel tells you what network you're on:
+If something is stopping the scan, one line at the top says what it is and how to fix it:
 
-- **Pink** — you're on a network, name and IP shown.
-- **Amber** — you're not on a network yet.
+- **Allow "Nearby devices" and precise location**: tap **Allow**.
+- **Turn on Bluetooth.**
+- **Turn on Location**: some Android versions need it switched on to scan.
+- **Turn on Wi-Fi for fast file transfers**: this one is optional. Finding people works without
+  it, but files then crawl over Bluetooth. Wi-Fi only needs to be **on**, not connected to a
+  network.
+
+Bluetooth links are one at a time. ChizChat opens one when you open a chat or send something, and
+closes it after two minutes of quiet. That is why a friend can show **In range** rather than a
+green dot. It is normal, and the link comes up by itself when you message them.
+
+### Wi-Fi mode
+
+When the radar is using Wi-Fi, a panel at the top tells you what network you're on:
+
+- **Pink**: you're on a network, name and IP shown.
+- **Amber**: you're not on a network yet.
 
 Tap it to expand a short explanation. On Android the **network name needs location permission**
-to display; if it's missing, the panel says so and points you at the IP instead — compare the
+to display; if it's missing, the panel says so and points you at the IP instead. Compare the
 first three blocks (e.g. `192.168.1.x`) on both devices.
 
-### No Wi-Fi around? Use a hotspot
-
-Tap **"No Wi-Fi network around? Use a phone hotspot"** for step-by-step instructions:
+No Wi-Fi around? Tap **"No Wi-Fi network around? Use a phone hotspot"**:
 
 1. On one phone, turn on **Personal Hotspot**.
-2. On the other phone, join that hotspot from Wi-Fi settings.
-3. Open Nearby on both — you'll now see each other on the radar.
+2. On the other device, join that hotspot from Wi-Fi settings.
+3. Open Nearby on both. You'll now see each other on the radar.
 
-The hotspot only creates a local network between the two phones. **Mobile data is never used**, so
+The hotspot only creates a local network between the devices. **Mobile data is never used**, so
 this works with no signal and costs nothing.
 
 ### Adding a nearby friend
 
 1. **Tap someone** on the radar (or their chip).
-2. A card slides up with their name and whether a Wi-Fi link is open.
+2. A card slides up with their name and how you're linked: **Bluetooth link**, **Wi-Fi Direct
+   link**, **Wi-Fi link**, or **In range** when no link is open yet.
 3. Tap **Add Friend**.
 4. They get a prompt: *"[Your name] wants to connect with you"* with **Accept** / **Decline**.
    Nothing happens until they accept — discovery never auto-connects.
 5. Once accepted you both appear in each other's **NEARBY** list.
 
 The card shows the state as it changes: **Request sent** (with a clock), **Request declined**, or
-a **Chat** button once you're paired.
+a **Chat** button once you're paired. If they don't answer within a minute you'll see *"[Name] did
+not respond"*, but their Accept still counts if they tap it later. If the request can't reach them
+at all, a message says so; check they still have ChizChat open and are close by.
+
+Only someone you sent a request to can accept it. A device in range can't add itself to your
+list without your Accept or your request.
 
 ### Adding by QR code
 
-If someone doesn't show up on the radar but you're both on the same network, tap the **▣ QR**
-icon:
+If someone doesn't show up on the radar but you're both on the same Wi-Fi network, tap the
+**▣ QR** icon:
 
 - **My Code** — shows your QR code for them to scan.
 - **Scan** — opens the camera to scan theirs. No camera? **Upload Image QR** reads a screenshot
@@ -682,14 +738,17 @@ request runs and the other side still sees the Accept prompt.
 
 Nearby friends live in the **NEARBY** tab with their own status:
 
-- **Green dot + WI-FI DIRECT** — connected directly, ready to move data.
-- **Grey dot + OUT OF RANGE** — not reachable right now.
+- **Green dot + BLUETOOTH / WI-FI DIRECT / WI-FI**: linked now, and how.
+- **IN RANGE**: they're nearby but no link is open. One opens when you message them.
+- **NOT CONNECTED**: not seen nearby recently.
 - **GLOBAL FRIEND** badge — this person is also in your internet friends list.
 
 Inbound requests appear above the list under **WANTS TO CONNECT** so you can't miss them.
 
 Nearby chats work exactly like normal chats — text, voice messages, reactions, replies, files,
-read receipts. The difference is the route: everything travels straight across the local Wi-Fi.
+read receipts. The difference is the route: everything travels straight between the two devices,
+over Bluetooth / Wi-Fi Direct or the shared Wi-Fi network. Messages sent while they're away wait
+and go out by themselves when you're next in range.
 
 **Friends you have both ways.** If someone is your internet friend *and* you've paired with them
 nearby, they're one person, not two: one row in **Chats** (a pink 📶 shows when they're nearby
@@ -700,8 +759,8 @@ otherwise. Their row on the Nearby tab opens the same conversation.
 **Deleting a nearby contact** (press and hold their row → **Delete contact**) also wipes your nearby chat history with them, and
 asks first. It does **not** remove them from your internet friends list.
 
-> **Desktop works too.** The Windows and Linux apps take part in Nearby over the same LAN, so
-> phone → laptop transfers work the same way.
+> **Desktop works too.** The Windows and Linux apps take part in Nearby over a shared Wi-Fi
+> network (or a phone hotspot), so phone → laptop transfers work the same way.
 
 ---
 
@@ -713,11 +772,17 @@ no invite list and no membership.
 ### Joining or creating
 
 1. Go to the **Rooms** tab and tap **Join or create a room**.
-2. Type a room name (it starts you off with `chizchat-lobby`).
+2. The name box already holds a fresh, hard-to-guess name such as `sunny-otter-4821` — keep it for
+   a new private room (tap 🔀 for another), or type the name someone gave you.
 3. Tap **JOIN ROOM**.
 
 Creating and joining are the same action: if the room exists you join it, and if it doesn't, it
-now does.
+now does. Names are case-sensitive: `Family` and `family` are different rooms.
+
+To invite people, open **⋮ → Copy room name** and paste it to them.
+
+Rooms you have joined are listed under **Rooms** (and as chips on the join screen) — tap one to
+rejoin, or **✕** to take it off the list. Its history stays on your device either way.
 
 ### Inside a room
 
@@ -725,11 +790,13 @@ now does.
 - Text, voice messages, files, reactions and replies all work as in a direct chat.
 - Your own messages show **"Seen by N"** — tap to see who.
 - A **peers panel** lists everyone currently in the room, with a **Search peers…** box.
-- **🖥 Share Screen** is in the header; **Clear history** is under **⋮**.
+- **🖥 Share Screen** is in the header; **Leave room** and **Clear history** are under **⋮**.
+  Leaving disconnects you and stops the room's notifications; your copy of its history stays,
+  and it is there again when you rejoin with the same name.
 
 If the room shows **"No other peers connected."** but you know people are there, use the
 **reconnect** button on that notice — it renews your connection identity, which fixes the case
-where your device's registration has gone stale.
+where your device's registration has gone stale. The app restarts and puts you back in the room.
 
 > Rooms have **no history for anyone who wasn't there**, and no server keeping the room alive.
 > Pick a room name only your group knows.
@@ -814,6 +881,18 @@ Team chats behave like rooms: everyone in the team receives messages, files and 
 own messages show **"Seen by N"**. Members don't need to have added each other as workmates. If
 you're both in a team, you can talk there.
 
+**Team messages only reach members who are online.** Workspace has no server to hold a message
+for someone who's away, so a team message reaches only the members who are on the network when
+you send it. ChizChat tells you who that leaves out:
+
+- Above the message box: *"Ana and Ben are offline and won't get what you send now."*
+- Under your message, once it's sent: **Not delivered to Ana and Ben**. With more than two people
+  it says how many; tap it for their names. It disappears once everyone has it.
+
+If someone missed something important, send it again when they're back, or message them
+directly: a message to one workmate waits on your device and you're offered to send it when they
+come online.
+
 Teams stay in step automatically. Someone who was away when a team was created, changed or
 deleted catches up the next time they're on the network at the same time as the team's creator
 or an admin.
@@ -859,6 +938,18 @@ straight away, and they're told the next time one of them is on the network.
 Workmate and team chats support the same messaging, voice messages, reactions, replies and file
 transfer as everywhere else — all over the LAN, with no internet. This is the fastest path for
 large files between an Android phone and a desktop.
+
+A few things work differently from friend chats:
+
+- **Reactions** reach workmates on this version of ChizChat or newer. Someone on an older version
+  doesn't see yours.
+- **Edit** isn't offered, and **pins** stay on your own device.
+- **Screen sharing** isn't available in Work chats yet.
+
+A **file shared in a team** stays open for everyone in it. Each member taps Accept when it suits
+them, and declining or cancelling only affects their own copy. Your bubble shows it as sent as
+soon as the first member has it. Keep ChizChat open until everyone who wants the file has it:
+it's sent from your device, for up to about a working day.
 
 On Android, an ongoing **"Workspace LAN — Listening for LAN connections"** notification is shown
 while the app is available to receive; it stops when you sign out or close the app.
@@ -963,8 +1054,8 @@ ChizChat only asks for a permission when you first use the feature that needs it
 | **Microphone** | Voice calls and voice messages |
 | **Camera** | Photos in chat, video calls, and scanning QR codes |
 | **Photos / Media / Files** | Attaching files, and saving received ones |
-| **Location** | Android requires it to read the **Wi-Fi network name**. ChizChat never collects, stores or transmits your location — if you decline, Nearby still works; you just compare IP addresses instead of network names. |
-| **Nearby Wi-Fi devices** | Discovering other ChizChat devices on your local network |
+| **Location** | Android requires it for a **Bluetooth scan** and to read the **Wi-Fi network name**. ChizChat never collects, stores or transmits your location. If you decline, Nearby falls back to Wi-Fi mode, where both devices need one shared network. |
+| **Nearby devices** / **Nearby Wi-Fi devices** | Finding other ChizChat phones over Bluetooth and Wi-Fi Direct, and on your local network |
 
 ---
 
@@ -974,13 +1065,23 @@ ChizChat only asks for a permission when you first use the feature that needs it
 
 The radar itself tells you most of this after 20 seconds, but in order of likelihood:
 
-1. **Different networks.** Compare the **IP** on both devices — the first three blocks should
-   match (`192.168.1.**x**`). This is by far the most common cause.
+**Two Android phones (Bluetooth mode):**
+
+1. **A permission or radio is off.** Read the line at the top of the radar: allow *Nearby
+   devices* and location, and turn on Bluetooth (and Location on older Android).
 2. **The other person isn't discoverable.** Check the 👁 eye icon on their radar.
-3. **The other device doesn't have ChizChat open.**
-4. **A guest or public Wi-Fi network is blocking devices from reaching each other.** Many hotel,
-   café and corporate guest networks do this deliberately. **Use a phone hotspot instead** — it
-   sidesteps the problem entirely and uses no mobile data.
+3. **The other phone doesn't have ChizChat open.**
+4. **The other phone has no Google Play services.** It falls back to Wi-Fi mode, so put both phones
+   on one Wi-Fi network or hotspot.
+
+**Wi-Fi mode (laptops, or a phone without Bluetooth mode):**
+
+1. **Different networks.** Compare the **IP** on both devices; the first three blocks should
+   match (`192.168.1.**x**`). This is by far the most common cause.
+2. **The other person isn't discoverable**, or doesn't have ChizChat open.
+3. **A guest or public Wi-Fi network is blocking devices from reaching each other.** Many hotel,
+   café and corporate guest networks do this deliberately, and so does a VPN. **Use a phone
+   hotspot instead.** It sidesteps the problem entirely and uses no mobile data.
 
 ### "A pairing code never connects"
 
@@ -1014,9 +1115,9 @@ and accepted are on disk in `Documents/ChizChat` and are unaffected.
 
 ### "Nothing works and the connection bar is red"
 
-You have no network. For **Friends** and **Rooms** you need internet. For **Nearby** and
-**Workspace** you only need to be on the same local network as the other person — a hotspot is
-enough.
+You have no network. For **Friends** and **Rooms** you need internet. **Nearby** between two
+Android phones needs no network at all. For Nearby with a laptop, and for **Workspace**, you only
+need to be on the same local network as the other person; a hotspot is enough.
 
 ---
 
@@ -1028,9 +1129,9 @@ enough.
   **relay** run by ChizChat at `turn.conewer.com`. The relay passes encrypted traffic along; it
   can't read your messages, calls or files and doesn't store them. It sees the two devices'
   network addresses and how much data flows.
-- **A signalling service is used to introduce two devices to each other** for internet chats
-  (Firebase Realtime Database). It carries connection metadata so two devices can find each other
-  — not your messages or files.
+- **A signalling service is used to introduce two devices to each other** for internet chats:
+  ChizChat's own relay at `quiver.conewer.com`. It carries connection metadata so two devices can
+  find each other — not your messages or files.
 - **Nearby and Workspace use no internet at all.** Traffic stays on your local network.
 - **Offline delivery uses a Quiver server**: ChizChat's own `quiver.conewer.com` by default, or
   one you choose, and none if you disconnect. Messages left there are end-to-end encrypted to your key and signed by the sender inside the encryption.
